@@ -109,6 +109,15 @@ technologies = {
 			name = electronics_folder
 			position = { x = -2 y = 4 }
 		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				tag = USA
+				factor = 4
+			}
+		}
+		
 		categories = {
 			electronics
 			radar_tech
@@ -137,6 +146,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 5
+			}
 			modifier = {
 				date < "1938.1.1"
 				factor = 0.5
@@ -182,6 +198,10 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
 				factor = 5
 			}
 			modifier = {
@@ -227,6 +247,13 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 4
+			}
+			modifier = {
 				date < "1940.1.1"
 				factor = 0.5
 			}
@@ -266,6 +293,13 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 4
+			}
+			modifier = {
 				date < "1941.1.1"
 				factor = 0.5
 			}
@@ -301,6 +335,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 5
+			}
 		}
 		
 		categories = {
@@ -438,7 +479,10 @@ technologies = {
 				date > "1941.1.1"
 			}
 
-
+			modifier = {
+				factor = 2
+				tag = GER
+			}
 		}
 		
 		categories = {
@@ -518,6 +562,16 @@ technologies = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
 			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -550,6 +604,16 @@ technologies = {
 			modifier = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
+			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
 			}
 		}
 		
@@ -584,6 +648,16 @@ technologies = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
 			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -615,6 +689,14 @@ technologies = {
 			}
 			modifier = {
 				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -644,6 +726,16 @@ technologies = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
 			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -672,6 +764,16 @@ technologies = {
 			modifier = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
+			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
 			}
 		}
 		
@@ -1105,6 +1207,10 @@ technologies = {
 		nuclear_production = 1
 		on_research_complete = {
 			if = {
+				limit = {
+					tag = USA
+					has_war_with = JAP
+				}
 			}
 		}
 		categories = {
